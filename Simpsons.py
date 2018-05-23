@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     #train
 
-    X_train_Ori, y_train_Ori = load_train_set("simpsons_dataset")
+    """X_train_Ori, y_train_Ori = load_train_set("simpsons_dataset")
     (X_train, X_test, y_train, y_test) = train_test_split(X_train_Ori, y_train_Ori,
     	test_size=0.2)
     (model,H)=training(model, X_train, X_test, y_train, y_test)
@@ -152,11 +152,13 @@ if __name__ == '__main__':
     plt.xlabel("Epoch #")
     plt.ylabel("Loss/Accuracy")
     plt.savefig("loss-accuracy2.png")
-    plt.legend()
+    plt.legend()"""
+
+    #predict
     X_out, y_out = load_test_set("kaggle_simpson_testset/")
     y_pred = model.predict(X_out)
 
-    #predict
+
     plt.style.use('classic')
 
     F = plt.figure( figsize=(15,20))
